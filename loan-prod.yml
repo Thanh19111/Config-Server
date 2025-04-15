@@ -2,7 +2,7 @@ build:
   version: "1.0"
 
 loan:
-  message: "Welcome to Loan Service related production APIs "
+  message: "Welcome to Loan Service related production (update) APIs "
   contactDetails:
     name: "Pham Thanh - Product Owner"
     email: "{cipher}609c42bb2e63ed0d4b3ad3f254812e9921c2021dc09d7b0770a453d667959cb675c5206e3f76d232eb2555e39bdb8837"
