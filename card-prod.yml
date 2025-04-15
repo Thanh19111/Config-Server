@@ -4,7 +4,7 @@ build:
 card:
   message: "Welcome to Card Service related production APIs "
   contactDetails:
-    name: "Sandra Harald - Product Owner"
+    name: "Thanh Pham - Product Owner"
     email: "{cipher}609c42bb2e63ed0d4b3ad3f254812e9921c2021dc09d7b0770a453d667959cb675c5206e3f76d232eb2555e39bdb8837"
   onCallSupport:
     - (617) 432-2356
