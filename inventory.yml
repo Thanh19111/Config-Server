@@ -8,6 +8,7 @@ spring:
   kafka:
     admin:
       auto-create: true
+    bootstrap-servers: ${KAFKA_BROKERS:localhost:9092}
 
   datasource:
     url: jdbc:mysql://localhost:3306/Inventory?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true

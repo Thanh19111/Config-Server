@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: notification
+  kafka:
+    bootstrap-servers: ${KAFKA_BROKERS:localhost:9092}
 
   cloud:
     function:

@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: order
+  kafka:
+    bootstrap-servers: ${KAFKA_BROKERS:localhost:9092}
   datasource:
     url: jdbc:mysql://localhost:3306/Order?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver

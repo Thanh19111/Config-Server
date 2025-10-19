@@ -25,6 +25,9 @@ spring:
         options:
           model: gemini-2.5-flash
 
+  kafka:
+    bootstrap-servers: ${KAFKA_BROKERS:localhost:9092}
+
     chat:
       memory:
         repository:
@@ -38,5 +41,11 @@ spring:
         max-document-batch-size: 1000
         schema-validation: true
         table-name: vector_store
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, refresh, busrefresh
 
 
