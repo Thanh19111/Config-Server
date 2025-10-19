@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: payment
+
+  cloud:
+    function:
+      definition: processOrderPayment
+    stream:
+      bindings:
+        processOrderPayment-in-0:
+          destination: order-payment
+          content-type: application/json
+          group: payment-group
+        sendSuccessPayment-out-0:
+          destination: success-payment
+          content-type: application/json
+          producer:
+            partition-key-expression: payload.orderId
+
+        sendFailedPayment-out-0:
+          destination: fail-payment
+          content-type: application/json
+          producer:
+            partition-key-expression: payload.orderId
+
+      kafka:
+        binder:
+          brokers: localhost:9092
+          auto-create-topics: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: busrefresh, refresh
+
+server:
+  port: 8083
